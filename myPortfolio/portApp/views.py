@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, "portApp/main.html")
+    return render(request, "portApp/index.html")
 
 def about(request):
     return render(request, 'portApp/about.html')
