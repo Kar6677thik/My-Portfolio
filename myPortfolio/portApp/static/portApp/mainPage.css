@@ -1,0 +1,97 @@
+.mainPage {
+    /* margin-block-start: 43vh;
+    margin-inline-start: 38vh; */
+    block-size: 90vh;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 43vh;
+    padding-inline-start: 38vh;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Start from left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at original position */
+    }
+}
+
+.mainPage .introduction {
+    animation: slideInFromLeft 1s ease-out; /* Adjust speed if needed */
+}
+
+
+.mainPage a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline Effect */
+.mainPage a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;  /* Adjust this value */
+    width: 0%;
+    height: 2px;
+    /* background-color: #00ffcc; */
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Expand underline on hover */
+.mainPage a:hover::after {
+    width: 100%;
+}
+
+
+.mainPage p {
+    line-height: 3rem;
+}
+
+#Greetings {
+    font-size: 3rem;
+    animation: slideInFromLeft 1s ease-out 0.2s both;
+}
+
+#My-Name {
+    font-size: 2rem;
+    animation: slideInFromLeft 1s ease-out 0.4s both;
+}
+
+#Invitation {
+    font-size: 1.5rem;
+    animation: slideInFromLeft 1s ease-out 0.6s both;
+}
+
+.socialsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-block-end: 10px;
+}
+
+.social-icons svg {
+    height: 2em;
+    width: 2em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap : 5px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: grey;
+}

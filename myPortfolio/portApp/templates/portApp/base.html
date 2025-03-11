@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'portApp/style.css'%}">
+    <link rel="stylesheet" href="{% static 'portApp/mainPage.css'%}">
+    <link rel="stylesheet" href="{% static 'portApp/about.css' %}">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- <video autoplay loop muted playsinline class="bg-video">
+        <source src="{% static 'portApp/video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>     -->
+    <header>
+        <nav class="primary-nav">
+            <ul>
+                <li><a href="{% url 'port-home' %}">Home</a></li>
+                <li><a href="{% url 'port-about' %}">About</a></li>
+                <li><a href="{% url 'port-projects' %}">Projects</a></li>
+                <li><a href="{% url 'port-contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
